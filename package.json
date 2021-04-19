@@ -1,0 +1,25 @@
+{
+  "name": "donde-las-personas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanFerguson-36/donde-las-personas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IanFerguson-36/donde-las-personas/issues"
+  },
+  "homepage": "https://github.com/IanFerguson-36/donde-las-personas#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.0.0",
+    "mysql": "^2.18.1"
+  }
+}
