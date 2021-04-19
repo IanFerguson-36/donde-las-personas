@@ -3,21 +3,22 @@ CREATE DATABASE employees_db;
 USE employees_db;
 
 CREATE TABLE department(
-    id INT PRIMARY KEY,
+    id INTEGER AUTO_INCREMENT NOT NULL
      name VARCHAR(30)
+     PRIMARY KEY(ID)
 );
 
 CREATE TABLE _role (
-    id INT PRIMARY KEY,
     title VARCHAR(30),
-    salary DECIMAL
+    salary DECIMAL (10, 4)
     department_id INT
+    PRIMARY KEY(ID)
 );
 
 CREATE TABLE employee (
-    id INT PRIMARY KEY,
     first_name VARCHAR(30),
     last_name VARCHAR(30),
     _role id INT,
     manager_id INT
+    PRIMARY KEY(ID)
 );
