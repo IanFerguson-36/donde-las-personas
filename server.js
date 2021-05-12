@@ -4,7 +4,6 @@ const cTable = require("console.table");
 const connection = mysql.createConnection({
   host: "localhost",
 
-  // Your port; if not 3306
   port: 3306,
 
   user: "root",
@@ -13,7 +12,16 @@ const connection = mysql.createConnection({
   database: "employees_db",
 });
 
+const testQuery = () => {
+  const query = "SELECT * FROM department";
+  connection.query(query, (err, res) => {
+    console.log(res);
+  });
+};
+
 connection.connect((err) => {
   if (err) throw err;
-  runSearch();
+  // runSearch();
+  console.log("Connection established!");
+  testQuery();
 });
