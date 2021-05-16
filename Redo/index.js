@@ -51,3 +51,22 @@ function firstPrompt() {
       console.log(err);
     });
 }
+
+function returnHome() {
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        message: "Would you like to make more changes to the directory?",
+        name: "restart",
+        choices: ["Yes", "No"],
+      },
+    ])
+    .then((result) => {
+      if (result.restart === "Yes") firstPrompt();
+      if (result.restart === "No") process.exit;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
