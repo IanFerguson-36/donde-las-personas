@@ -21,7 +21,31 @@ function firstPrompt() {
       },
     ])
     .then((result) => {
-      console.log(result);
+      switch (result.prompt) {
+        case "View all employees":
+          console.log("fire view all employees function");
+          //ask the end question
+          break;
+        case "View all departments":
+          // code block
+          console.log("f");
+          break;
+        case "View all roles":
+          console.log(" employees function");
+          break;
+        case "Add new employee":
+          console.log("function");
+          break;
+        case "Add new department":
+          console.log("fire view ");
+          break;
+        case "Add new role":
+          console.log("fire view function");
+          break;
+        case "Update employee role":
+          console.log(" employees ");
+          break;
+      }
     })
     .catch((err) => {
       console.log(err);
