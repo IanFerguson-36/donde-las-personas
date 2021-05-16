@@ -23,8 +23,8 @@ function firstPrompt() {
     .then((result) => {
       switch (result.prompt) {
         case "View all employees":
-          console.log("fire view all employees function");
           //ask the end question
+          allEmployees();
           break;
         case "View all departments":
           // code block
@@ -50,6 +50,12 @@ function firstPrompt() {
     .catch((err) => {
       console.log(err);
     });
+}
+function allEmployees() {
+  // call back end database
+  console.log("employees seen here");
+  // display result in console.table
+  returnHome();
 }
 
 function returnHome() {
