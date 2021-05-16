@@ -1,4 +1,6 @@
 const inquirer = require("inquirer");
+const db = require("./db");
+require("console.table");
 
 firstPrompt();
 
@@ -54,6 +56,14 @@ function firstPrompt() {
 function allEmployees() {
   // call back end database
   console.log("employees seen here");
+
+  db.getEmployees()
+    .then((employees) => {
+      console.log(employees);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   // display result in console.table
   returnHome();
 }
