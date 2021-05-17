@@ -23,7 +23,7 @@ class Database {
   }
   getRoles() {
     return new Promise((req, res) => {
-      this.connection.query("SELECT * FROM roles", (err, results) => {
+      this.connection.query("SELECT * FROM _role", (err, results) => {
         req(results);
         res(err);
       });
