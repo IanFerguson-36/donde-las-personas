@@ -67,6 +67,20 @@ function allEmployees() {
   // display result in console.table
   returnHome();
 }
+function allDepartments() {
+  // call back end database
+  console.log("employees seen here");
+
+  db.getDepartments()
+    .then((departments) => {
+      console.log(departments);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  // display result in console.table
+  returnHome();
+}
 
 function returnHome() {
   inquirer
