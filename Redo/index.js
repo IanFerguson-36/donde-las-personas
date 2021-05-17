@@ -30,10 +30,10 @@ function firstPrompt() {
           break;
         case "View all departments":
           // code block
-          console.log("f");
+          allDepartments();
           break;
         case "View all roles":
-          console.log(" employees function");
+          allRoles();
           break;
         case "Add new employee":
           console.log("function");
@@ -74,6 +74,19 @@ function allDepartments() {
   db.getDepartments()
     .then((departments) => {
       console.log(departments);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  // display result in console.table
+  returnHome();
+}
+function allRoles() {
+  // call back end database
+
+  db.getRoles()
+    .then((roles) => {
+      console.log(roles);
     })
     .catch((err) => {
       console.log(err);

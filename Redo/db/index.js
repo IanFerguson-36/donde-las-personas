@@ -13,6 +13,22 @@ class Database {
       });
     });
   }
+  getDepartments() {
+    return new Promise((req, res) => {
+      this.connection.query("SELECT * FROM department", (err, results) => {
+        req(results);
+        res(err);
+      });
+    });
+  }
+  getRoles() {
+    return new Promise((req, res) => {
+      this.connection.query("SELECT * FROM roles", (err, results) => {
+        req(results);
+        res(err);
+      });
+    });
+  }
 }
 
 module.exports = new Database(connection);
